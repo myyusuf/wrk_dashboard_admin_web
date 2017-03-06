@@ -95,7 +95,7 @@ export default class ProjectProgressList {
 
     var searchTextBox = new TextBox({placeHolder: 'Kode atau Nama', width: 250, height: 24});
     var searchButton = new Button({
-      imgSrc:'/pcd_assets/images/search.png',
+      imgSrc:'/assets/images/search.png',
       theme: 'metro',
       width: 30,
       height: 26,
