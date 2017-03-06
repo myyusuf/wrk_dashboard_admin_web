@@ -16,7 +16,7 @@ export default class ProjectList {
 
     var _this = this;
 
-    var url = "/projects";
+    var url = "/api/projects";
 
     var source = {
         datatype: "json",
@@ -24,7 +24,7 @@ export default class ProjectList {
           { name: 'id', type: 'int' },
           { name: 'code', type: 'string' },
           { name: 'name', type: 'string' },
-          { name: 'project_type', type: 'int' },
+          // { name: 'project_type', type: 'int' },
           { name: 'description', type: 'string' },
         ],
         id: "id",
@@ -67,10 +67,10 @@ export default class ProjectList {
                     return params.data;
                 },
         columns: [
-          { text: 'Kode', datafield: 'code', width: '20%' },
-          { text: 'Nama', datafield: 'name', width: '20%' },
-          { text: 'Tipe', datafield: 'project_type', cellsrenderer: cellsrenderer, width: '30%' },
-          { text: 'Deskripsi', datafield: 'description', width: '30%'},
+          { text: 'Kode', datafield: 'code', width: '30%' },
+          { text: 'Nama', datafield: 'name', width: '30%' },
+          // { text: 'Tipe', datafield: 'project_type', cellsrenderer: cellsrenderer, width: '30%' },
+          { text: 'Deskripsi', datafield: 'description', width: '40%'},
         ],
         groups: []
     }
@@ -93,7 +93,7 @@ export default class ProjectList {
 
     var searchTextBox = new TextBox({placeHolder: 'Kode atau Nama', width: 250, height: 24});
     var searchButton = new Button({
-      imgSrc:'/pcd_assets/images/search.png',
+      imgSrc:'/assets/images/search.png',
       theme: 'metro',
       width: 30,
       height: 26,
