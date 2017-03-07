@@ -21,10 +21,14 @@ export default class FileUpload {
 
     this.uploadUrl = options.uploadUrl;
     this.fileInputName = options.fileInputName;
+    this.uploadEnd = options.uploadEnd;
 
   }
 
   render(container) {
+
+    var _this = this;
+
     var fileUploadContainer = $('<div></div>');
     fileUploadContainer.attr('id', this.id);
     fileUploadContainer.appendTo(container);
@@ -49,6 +53,16 @@ export default class FileUpload {
     fileUploadOptions['autoUpload'] = true;
 
     fileUploadContainer.jqxFileUpload(fileUploadOptions);
+
+    if(this.uploadEnd){
+      fileUploadContainer.on('uploadEnd', function (event) {
+          // var args = event.args;
+          // var fileName = args.file;
+          // var serverResponse = args.response;
+          _this.uploadEnd(event);
+      });
+    }
+
 
     this.component = fileUploadContainer;
   }
