@@ -54,7 +54,7 @@ export default class ProjectProgressList {
           { text: 'Bulan', datafield: 'month', width: columnWidth},
           { text: 'Username', datafield: 'username', width: columnWidth },
           { text: 'Key', datafield: 'key', width: columnWidth },
-          { text: 'Cretaed Time', datafield: 'created_time', cellsformat: 'dd-MM-yyyy hh:mm:ss', width: columnWidth },
+          { text: 'Created Time', datafield: 'created_time', cellsformat: 'dd-MM-yyyy hh:mm:ss', width: columnWidth },
 
         ]
     }
