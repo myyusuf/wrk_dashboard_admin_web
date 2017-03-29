@@ -23,7 +23,8 @@ export default class UserList {
         datafields: [
           { name: 'username', type: 'string' },
           { name: 'name', type: 'string' },
-          { name: 'email', type: 'string' }
+          { name: 'email', type: 'string' },
+          { name: 'role', type: 'string' }
         ],
         id: "username",
         url: url
@@ -46,8 +47,9 @@ export default class UserList {
                 },
         columns: [
           { text: 'Username', datafield: 'username', width: '30%' },
-          { text: 'Name', datafield: 'name', width: '40%' },
-          { text: 'Email', datafield: 'email', width: '30%' },
+          { text: 'Name', datafield: 'name', width: '35%' },
+          { text: 'Email', datafield: 'email', width: '20%' },
+          { text: 'Role', datafield: 'role', width: '15%' },
         ],
         groups: []
     }

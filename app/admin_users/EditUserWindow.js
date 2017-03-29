@@ -5,6 +5,7 @@ import EditWindow from '../base/components/EditWindow';
 import TextBox from '../base/components/TextBox';
 import TextArea from '../base/components/TextArea';
 import Label from '../base/components/Label';
+import RoleComboBox from "./RoleComboBox";
 
 export default class EditUserWindow {
 
@@ -20,6 +21,7 @@ export default class EditUserWindow {
     var usernameTextBox = new TextBox({value: user.username, disabled: true, height: 25, width: '90%'});
     var nameTextBox = new TextBox({value: user.name, height: 25, width: '90%'});
     var emailTextBox = new TextBox({value: user.email, height: 25, width: '90%'});
+    var roleComboBox = new RoleComboBox({value:user.role, height: 25, width: '92.5%'});
 
     var formItems = [
       {
@@ -41,6 +43,15 @@ export default class EditUserWindow {
         label: 'Email',
         content: emailTextBox
       },
+      {
+        name: 'role',
+        label: 'Role',
+        content: roleComboBox,
+        validation:{
+          type: 'COMBOBOX',
+          rule: 'required'
+        }
+      }
     ];
     var formOptions = {
       items: formItems,
